@@ -1,0 +1,161 @@
+/* Story Studio — minimal interface */
+:root {
+    --ink: #202020;
+    --muted: #777777;
+    --line: #e8e8e5;
+    --surface: #ffffff;
+    --soft: #f7f7f5;
+}
+
+.stApp {
+    background: #fbfbfa;
+    color: var(--ink);
+}
+
+header[data-testid="stHeader"] {
+    background: transparent;
+}
+
+.block-container {
+    max-width: 760px;
+    padding-top: 4.2rem;
+    padding-bottom: 3rem;
+}
+
+.page-heading {
+    text-align: center;
+    margin: 0 auto 3rem;
+}
+
+.eyebrow {
+    color: #858585;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    margin-bottom: 1rem;
+}
+
+.page-heading h1 {
+    color: var(--ink);
+    font-size: clamp(2.3rem, 6vw, 3.2rem);
+    font-weight: 600;
+    letter-spacing: -0.055em;
+    line-height: 1.08;
+    margin: 0 0 0.8rem;
+}
+
+.page-heading p {
+    color: var(--muted);
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.section-label {
+    color: #666666;
+    font-size: 0.68rem;
+    font-weight: 650;
+    letter-spacing: 0.13em;
+    margin: 0 0 0.75rem;
+}
+
+div[data-testid="stTextArea"] textarea {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    color: var(--ink);
+    font-size: 0.98rem;
+    line-height: 1.7;
+    padding: 1rem 1.1rem;
+    box-shadow: none;
+}
+
+div[data-testid="stTextArea"] textarea:focus {
+    border-color: #a9a9a3;
+    box-shadow: 0 0 0 1px #a9a9a3;
+}
+
+div[data-testid="stSelectbox"] label,
+div[data-testid="stSlider"] label {
+    color: #666666;
+    font-size: 0.68rem;
+    font-weight: 650;
+    letter-spacing: 0.12em;
+}
+
+div[data-testid="stSelectbox"] div[data-baseweb="select"] > div {
+    background: #ffffff;
+    border-color: var(--line);
+    border-radius: 8px;
+}
+
+div[data-testid="stButton"] > button {
+    background: #222222;
+    border: 1px solid #222222;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 550;
+    min-height: 3rem;
+    transition: background 150ms ease, border-color 150ms ease;
+}
+
+div[data-testid="stButton"] > button:hover {
+    background: #444444;
+    border-color: #444444;
+    color: #ffffff;
+}
+
+div[data-testid="stButton"] > button:focus {
+    box-shadow: 0 0 0 2px #d7d7d2;
+}
+
+.result-divider {
+    border-top: 1px solid var(--line);
+    margin: 2.4rem 0 1.8rem;
+}
+
+.story-original,
+.story-output {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    color: #333333;
+    font-size: 0.98rem;
+    line-height: 1.85;
+    padding: 1.2rem 1.35rem;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.story-original {
+    background: var(--soft);
+    color: #666666;
+}
+
+.generated-label {
+    margin-top: 1.7rem;
+}
+
+.footer-note {
+    border-top: 1px solid var(--line);
+    color: #999999;
+    font-size: 0.75rem;
+    margin-top: 3.2rem;
+    padding-top: 1.2rem;
+    text-align: center;
+}
+
+/* Keep Streamlit's layout clean and distraction-free. */
+#MainMenu, footer {
+    visibility: hidden;
+}
+
+@media (max-width: 640px) {
+    .block-container {
+        padding: 2.5rem 1.1rem 2rem;
+    }
+    .page-heading {
+        margin-bottom: 2.2rem;
+    }
+}
